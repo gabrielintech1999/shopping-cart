@@ -36,9 +36,9 @@ export default function App() {
 
       {/* Barra de progresso estilo GitHub */}
       {isLoading && (
-        <div className="fixed top-20 left-0 w-full h-2 bg-gray-200">
+        <div className="fixed top-16 left-0 w-full h-2 bg-gray-200">
           <div
-            className="h-full bg-red-500"
+            className="h-full bg-blue-500"
             style={{
               width: "100%",
               animation: "progress-bar 7s linear infinite",
@@ -51,7 +51,7 @@ export default function App() {
       <main className=" mt-14 grid grid-cols-2 md:grid-cols-3 gap-6 p-6 bg-gray-50 rounded-lg shadow-lg">
         {isLoading && (
           <p className="col-span-2 md:col-span-3 text-center">
-            Carregando produtos...
+            Carregando os produtos...
           </p>
         )}
         {isError && (

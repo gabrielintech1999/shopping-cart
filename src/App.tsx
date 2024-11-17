@@ -49,22 +49,22 @@ export default function App() {
 
       {/* Main Content */}
       <main className="mt-24 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 px-4 sm:px-6 max-w-screen-lg mx-auto">
-  {isLoading && (
-    <p className="col-span-2 sm:col-span-3 lg:col-span-4 text-center">
-      Carregando os produtos...
-    </p>
-  )}
-  {isError && (
-    <p className="col-span-2 sm:col-span-3 lg:col-span-4 text-center text-red-500">
-      Erro: {error.message}
-    </p>
-  )}
-  {products?.map((product: Product) => (
-    <Card key={product.id} product={product} />
-  ))}
-</main>
+        {isLoading && (
+          <p className="col-span-2 sm:col-span-3 lg:col-span-4 text-center">
+            Carregando os produtos...
+          </p>
+        )}
+        {isError && (
+          <p className="col-span-2 sm:col-span-3 lg:col-span-4 text-center text-red-500">
+            Erro: {error.message}
+          </p>
+        )}
+        {products?.map((product: Product) => (
+          <Card key={product.id} product={product} />
+        ))}
+      </main>
 
-     
+      {false && <Cart />}
     </>
   );
 }

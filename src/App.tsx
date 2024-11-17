@@ -48,23 +48,24 @@ export default function App() {
       )}
 
       {/* Main Content */}
-      <main className=" mt-14 grid grid-cols-2 md:grid-cols-3 gap-6 p-6 bg-gray-50 rounded-lg shadow-lg">
-        {isLoading && (
-          <p className="col-span-2 md:col-span-3 text-center">
-            Carregando os produtos...
-          </p>
-        )}
-        {isError && (
-          <p className="col-span-2 md:col-span-3 text-center text-red-500">
-            Erro: {error.message}
-          </p>
-        )}
-        {products?.map((product: Product) => (
-          <Card key={product.id} product={product} />
-        ))}
-      </main>
+      <main className="mt-14 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 sm:p-6 bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+  {isLoading && (
+    <p className="col-span-1 sm:col-span-2 md:col-span-3 text-center">
+      Carregando os produtos...
+    </p>
+  )}
+  {isError && (
+    <p className="col-span-1 sm:col-span-2 md:col-span-3 text-center text-red-500">
+      Erro: {error.message}
+    </p>
+  )}
+  {products?.map((product: Product) => (
+    <Card key={product.id} product={product} />
+  ))}
+</main>
 
-      {false && <Cart />}
+{false && <Cart />}
+
      
     </>
   );

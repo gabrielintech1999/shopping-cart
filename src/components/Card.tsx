@@ -50,7 +50,7 @@ const Card = ({ product }: { product: Product }) => {
 
         {/* Botão */}
         <button className="w-full mt-4 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700">
-          Adicionar ao Carrinho
+          Add ao Carrinho
         </button>
       </div>
     </div>
